@@ -1,0 +1,7 @@
+java_test(
+    name = "parser_test",
+    srcs = ["ParserTest.java"],
+    main_class = "ParserTest",
+    use_testrunner = False,
+    deps = ["//:eug_parser"],
+)
