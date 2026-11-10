@@ -43,3 +43,4 @@ pack.bat
 
 /.gradle/
 build
+/bazel-*
