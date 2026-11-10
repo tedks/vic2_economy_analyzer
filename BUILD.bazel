@@ -1,5 +1,8 @@
+load("@rules_java//java:java_library.bzl", "java_library")
+
 java_library(
     name = "eug_parser",
+    # Explicit parser closure; the JavaFX application remains Gradle-owned.
     srcs = [
         "src/main/java/eug/parser/CWordFile.java",
         "src/main/java/eug/parser/ChildrenConsumer.java",
@@ -8,7 +11,6 @@ java_library(
         "src/main/java/eug/parser/ListScanner.java",
         "src/main/java/eug/parser/ParserException.java",
         "src/main/java/eug/parser/ParserSettings.java",
-        "src/main/java/eug/parser/ParserTestMain.java",
         "src/main/java/eug/parser/PostloadFilter.java",
         "src/main/java/eug/parser/PreloadFilter.java",
         "src/main/java/eug/parser/TokenScanner.java",
@@ -26,12 +28,6 @@ java_library(
         "src/main/java/eug/shared/Utilities.java",
         "src/main/java/eug/shared/Version.java",
         "src/main/java/eug/shared/WritableObject.java",
-        "src/main/java/eug/specific/clausewitz/ClausewitzDataSource.java",
-        "src/main/java/eug/specific/clausewitz/ClausewitzHistory.java",
-        "src/main/java/eug/specific/clausewitz/ClausewitzSaveGame.java",
-        "src/main/java/eug/specific/clausewitz/ClausewitzScenario.java",
-        "src/main/java/eug/specific/victoria2/Vic2SaveGame.java",
-        "src/main/java/eug/specific/victoria2/Vic2Scenario.java",
     ],
     visibility = ["//visibility:public"],
 )

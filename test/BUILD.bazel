@@ -1,5 +1,8 @@
+load("@rules_java//java:java_test.bzl", "java_test")
+
 java_test(
     name = "parser_test",
+    size = "small",
     srcs = ["ParserTest.java"],
     main_class = "ParserTest",
     use_testrunner = False,
